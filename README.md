@@ -1,5 +1,12 @@
 # props
 
+este proyecto se usa json server para simular api, al comienzo del  proyecto hacer npm run dev y npm run servr,
+en las cards del grid se puede hacer click para hacr un flip y ver una imagen de las cartas tcg del respectivo digimon, intente hacerlo con apis
+pero tenia que usar 2 y la api del tcg era muy estricta con los get, asi que me vetaron 1 hora saksjakj, el props es entre digimoncards y digimongrid, las cards se
+pasan al grid como padxre e hijo.
+
+
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
