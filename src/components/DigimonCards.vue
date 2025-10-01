@@ -3,36 +3,28 @@
     <div v-if="loading" class="loading">Cargando Digimons...</div>
     <div v-if="error" class="error">{{ error }}</div>
 
-    <div class="cards-grid">
+    <div class="row g-3">
       <div
         v-for="card in cards"
         :key="card.id"
-        class="digimon-card"
-        :class="{ flipped: card.flipped }"
-        @click="toggleFlip(card)"
+        class="col-12 col-sm-6 col-md-6 col-lg-3 d-flex justify-content-center"
       >
-        <div class="card-face card-front">
-          <img
-            v-if="card.image"
-            :src="card.image"
-            :alt="card.name"
-            class="card-image-front"
-          />
-          <div class="card-info">
-            <p><strong>{{ card.name }}</strong></p>
-            <p>Level: {{ card.level }}</p>
-            <p>Type: {{ card.type }}</p>
+        <div class="digimon-card" :class="{ flipped: card.flipped }" @click="toggleFlip(card)">
+          <!-- Front -->
+          <div class="card-face card-front">
+            <img v-if="card.image" :src="card.image" :alt="card.name" class="card-image-front" />
+            <div class="card-info">
+              <p><strong>{{ card.name }}</strong></p>
+              <p>Level: {{ card.level }}</p>
+              <p>Type: {{ card.type }}</p>
+            </div>
           </div>
-        </div>
 
-        <div class="card-face card-back">
-          <img
-            v-if="card.tcg"
-            :src="card.tcg"
-            :alt="card.name + ' tcg'"
-            class="card-image-back"
-          />
-          <div v-else class="card-placeholder">No TCG Image</div>
+          <!-- Back -->
+          <div class="card-face card-back">
+            <img v-if="card.tcg" :src="card.tcg" :alt="card.name + ' TCG'" class="card-image-back" />
+            <div v-else class="card-placeholder">No TCG Image</div>
+          </div>
         </div>
       </div>
     </div>
@@ -81,32 +73,23 @@ onMounted(loadDigimons);
 </script>
 
 <style scoped>
-.digimon-cards-container {
-  padding: 1rem;
-}
-
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  gap: 1rem;
-}
-
 .digimon-card {
   perspective: 1000px;
-  cursor: pointer;
-  height: 400px;
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 2/3; /* Mantiene la proporción alto/ancho */
   position: relative;
-
-  border: 2px solid #ccc; 
-  border-radius: 10px;  
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
-  background: #fff;           
+  cursor: pointer;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  background: #fff;
 }
 
 .card-face {
   width: 100%;
   height: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
   backface-visibility: hidden;
   position: absolute;
   top: 0;
@@ -115,7 +98,6 @@ onMounted(loadDigimons);
   transition: transform 0.6s;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -127,7 +109,7 @@ onMounted(loadDigimons);
 
 .card-back {
   transform: rotateY(180deg);
-  background: #000; 
+  background: #000;
 }
 
 .digimon-card.flipped .card-front {
@@ -138,24 +120,21 @@ onMounted(loadDigimons);
   transform: rotateY(0deg);
 }
 
-
 .card-image-front {
   width: 100%;
-  height: 65%;
+  height: 60%;
   object-fit: contain;
 }
-
 
 .card-image-back {
   width: 100%;
   height: 100%;
-  object-fit: contain; 
-  background: #000;    
+  object-fit: contain;
 }
 
 .card-info {
   width: 100%;
-  height: 35%;
+  height: 40%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
