@@ -1,0 +1,69 @@
+
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "agumon",
+      "level": "child",
+      "type": "vaccine",
+      "image": "https://digi-api.com/images/digimon/w/Agumon.png",
+      "tcg": "https://images.digimoncard.io/images/cards/BT1-010.jpg"
+    },
+    {
+      "id": 2,
+      "name": "greymon",
+      "level": "adult",
+      "type": "vaccine",
+      "image": "https://digi-api.com/images/digimon/w/Greymon.png",
+      "tcg": "https://images.digimoncard.io/images/cards/EX9-009.jpg"
+    },
+    {
+      "id": 3,
+      "name": "metal greymon",
+      "level": "perfect",
+      "type": "vaccine",
+      "image": "https://digi-api.com/images/digimon/w/Metal_Greymon.png",
+      "tcg": "https://images.digimoncard.io/images/cards/BT1-021.jpg"
+    },
+    {
+      "id": 4,
+      "name": "war greymon",
+      "level": "ultimate",
+      "type": "vaccine",
+      "image": "https://digi-api.com/images/digimon/w/War_Greymon.png",
+      "tcg": "https://images.digimoncard.io/images/cards/BT21-026.jpg"
+    },
+    {
+      "id": 5,
+      "name": "gabumon",
+      "level": "child",
+      "type": "data",
+      "image": "https://digi-api.com/images/digimon/w/Gabumon.png",
+      "tcg": "https://images.digimoncard.io/images/cards/P-042.jpg"
+    },
+    {
+      "id": 6,
+      "name": "garurumon",
+      "level": "adult",
+      "type": "data",
+      "image": "https://digi-api.com/images/digimon/w/Garurumon.png",
+      "tcg": "https://images.digimoncard.io/images/cards/BT15-024.jpg"
+    },
+    {
+      "id": 7,
+      "name": "were garurumon",
+      "level": "perfect",
+      "type": "data",
+      "image": "https://digi-api.com/images/digimon/w/Were_Garurumon.png",
+      "tcg": "https://images.digimoncard.io/images/cards/P-008.jpg"
+    },
+    {
+      "id": 8,
+      "name": "metal garurumon",
+      "level": "ultimate",
+      "type": "data",
+      "image": "https://digi-api.com/images/digimon/w/Metal_Garurumon.png",
+      "tcg": "https://images.digimoncard.io/images/cards/ST2-11.jpg"
+    }
+  ]
+}
